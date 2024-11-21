@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,4 +18,26 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-4 max-w-7xl
+  }
+
+  .botao {
+    @apply flex justify-center items-center;
+    @apply gap-2 rounded-md px-9 h-9;
+    @apply text-sm font-semibold
+  }
+
+  .botao.azul {
+    @apply bg-blue-500 text-white hover:bg-blue-600
+  }
+  .botao.vermelho {
+    @apply bg-red-500 text-white hover:bg-red-600
+  }
+  .botao.verde {
+    @apply bg-green-500 text-white hover:bg-green-600
+  }
 }
